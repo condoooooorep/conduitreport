@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAI&#x27;s Jalapeño chip vs Nvidia | Conduit Report</title>
+<meta name="description" content="OpenAI&#x27;s Jalapeño beat Nvidia on efficiency in early tests. But it won&#x27;t replace Nvidia, it&#x27;s not out yet, and the real story is about margins, not GPUs.">
+<link rel="canonical" href="https://www.conduitreport.com/openai-jalapeno-chip-nvidia/">
+<meta property="og:title" content="OpenAI&#x27;s Jalapeño chip vs Nvidia | Conduit Report">
+<meta property="og:description" content="OpenAI&#x27;s Jalapeño beat Nvidia on efficiency in early tests. But it won&#x27;t replace Nvidia, it&#x27;s not out yet, and the real story is about margins, not GPUs.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Conduit Report">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.conduitreport.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..900;1,100..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0B1F26">
+<link rel="alternate" type="application/rss+xml" title="Conduit Report" href="/feed.xml">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5469599588574787" crossorigin="anonymous"></script>
+<!-- analytics: add a token in build.py -->
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "OpenAI built a chip to need Nvidia less \u2014 and it's not what it looks like", "description": "OpenAI's Jalape\u00f1o beat Nvidia on efficiency in early tests. But it won't replace Nvidia, it's not out yet, and the real story is about margins, not GPUs.", "image": ["https://www.conduitreport.com/og-image.png"], "datePublished": "2026-08-30", "dateModified": "2026-08-30", "author": {"@type": "Organization", "name": "Conduit Report"}, "publisher": {"@type": "Organization", "name": "Conduit Report", "logo": {"@type": "ImageObject", "url": "https://www.conduitreport.com/apple-touch-icon.png"}}, "mainEntityOfPage": "https://www.conduitreport.com/openai-jalapeno-chip-nvidia/"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="logo" href="/">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">Conduit<em>Report</em></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/">Latest</a>
+      <a href="/games/">Games</a><a href="/tech/">Tech</a><a href="/ai/">AI</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<article class="post">
+  <div class="wrap wrap--read">
+    <header class="post__head">
+      <p class="post__meta">
+        <span class="stamp stamp--reported">Reported</span>
+        <time datetime="2026-08-30">30 August 2026</time>
+        
+        <span>4 min read</span>
+      </p>
+      <p class="crumb"><a href="/ai/">AI</a></p>
+      
+      <h1>OpenAI built a chip to need Nvidia less — and it's not what it looks like</h1>
+      <p class="post__dek">OpenAI's Jalapeño beat Nvidia on efficiency in early tests. But it won't replace Nvidia, it's not out yet, and the real story is about margins, not GPUs.</p>
+      <p class="post__stampnote">Carried by established outlets, not officially confirmed.</p>
+    </header>
+    <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <div class="prose">
+<p>OpenAI has a chip now. It's called Jalapeño, it's made with Broadcom, and in the company's own early benchmarks it beat Nvidia's Blackwell systems on efficiency.</p>
+<p>That's the headline everyone ran, and it's roughly true. It's also being widely misread as "OpenAI is dumping Nvidia," which is not what's happening and not what OpenAI said. The real story is narrower, slower, and more interesting than the version going around.</p>
+<h2>What's actually confirmed</h2>
+<p>OpenAI and Broadcom unveiled Jalapeño on 24 June 2026 and showed it in more detail at the Hot Chips conference in late August. The company facts are solid; the performance claims are OpenAI's own, which is why the stamp on this post is Reported, not Confirmed.</p>
+<aside class="callout callout--confirmed"><p class="callout__label">What it is</p><p>Jalapeño is OpenAI's first custom chip, co-designed with Broadcom, manufactured by TSMC. It's an inference chip — it runs already-trained models, it doesn't train them. Initial deployment is planned for end of 2026.</p></aside>
+<aside class="callout callout--reported"><p class="callout__label">The performance</p><p>OpenAI says Jalapeño beat Nvidia's GB300 on work done per unit of power in nearly all tested scenarios. That's OpenAI's benchmark, not an independent one, and analysts noted it wasn't tested against Nvidia's newer Vera Rubin generation — a fairer comparison.</p></aside>
+<p>The word doing the heavy lifting is <strong>inference</strong>. Training a model — teaching it on huge datasets over weeks — is one job. Inference — running the finished model to answer your actual prompt — is a different one, done billions of times a day. Jalapeño only does the second. Nvidia's GPUs do both, which is exactly why they're expensive and general-purpose.</p>
+<h2>Why it won't replace Nvidia</h2>
+<p>This is the part the headlines skip.</p>
+<p>OpenAI's own hardware chief said Nvidia remains a key partner and that OpenAI expects to keep buying its chips in large quantities. That's not diplomacy — it's structural. OpenAI still needs Nvidia and AMD for training, and a purpose-built inference chip does nothing for that. Nvidia also owns CUDA, the software layer the entire industry is built on, and that lock-in doesn't evaporate because a competitor shipped one good chip.</p>
+<p>And Jalapeño isn't out. "Initial deployment by end of 2026" means small-scale this year, a ramp through 2027, full-scale operations not until 2028. Broadcom's own executives have described exactly that timeline. This is the first rung of a multi-year ladder, not a chip replacing GPUs next quarter.</p>
+<aside class="callout callout--rumour"><p class="callout__label">"OpenAI is ditching Nvidia"</p><p>Not happening, and OpenAI explicitly said so. This is a supplement for one specific workload, staged over years, not a replacement.</p></aside>
+<h2>What it's really about</h2>
+<p>Money. Specifically, OpenAI's.</p>
+<p>OpenAI filed confidentially for an IPO in June and is expected to go public. It also spent enormous sums serving users — the uncomfortable question hanging over the whole company is how it ever turns a profit when running the models costs so much. Inference is the bulk of that ongoing cost, and it grows every time someone sends a prompt.</p>
+<p>Broadcom's CEO floated a roughly 50% cut in inference cost per token. Even a fraction of that, at OpenAI's scale, changes the company's economics structurally. That's what Jalapeño is for. It's not a product you'll buy or a war on Nvidia — it's OpenAI trying to own its single largest recurring cost before it lists on the stock market.</p>
+<p>There's a neat detail underneath it: OpenAI used its own models to help design the chip, and calls it the fastest ASIC development cycle ever, nine months from design to tape-out. AI helping build the hardware that runs AI. Whether that claim holds up is for the independent technical report OpenAI says is coming.</p>
+<h2>Why it matters beyond OpenAI</h2>
+<p>The broader shift is real even if this specific chip underwhelms. The big AI companies are all building custom inference silicon — Amazon has Trainium, Anthropic committed to spending heavily on it, Google has had its own chips for years. One analyst firm expects custom chips to exceed GPUs in volume by 2028.</p>
+<p>Nvidia still controls the vast majority of AI compute and isn't in trouble. But inference is the fastest-growing slice of the market, and it's precisely the slice these custom chips target. The threat isn't to Nvidia's existence. It's to Nvidia's margins on the one part of the business growing fastest, and that's a slower, realer story than "OpenAI killed the GPU."</p>
+<p>Watch two things: whether Jalapeño actually ships on schedule, and whether that independent benchmark report backs up the claims. Both are checkable. Neither has happened yet.</p>
+    </div>
+    <footer class="post__foot">
+      
+      <p class="post__updated">Published 30 August 2026. We add a dated update line to this page
+      when something it covers materially changes.</p>
+    </footer>
+    <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <nav class="pnav" aria-label="More posts"><a class="pnav__a pnav__a--n" href="/ai-model-price-collapse/"><span>Next</span>The AI price war nobody's calling a price war</a></nav>
+  </div>
+</article>
+</main>
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p class="foot__brand">Conduit Report</p>
+    <p class="foot__disc">Independent coverage of games and technology. Not affiliated with, endorsed by,
+    or connected to any company written about here. All trademarks and product names belong to their
+    respective owners. Claims are attributed to their source and dated.</p>
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="/about/">About</a>
+      <a href="/editorial-standards/">Editorial standards</a>
+      <a href="/contact/">Contact</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy-policy/">Privacy policy</a>
+    </nav>
+    <p class="foot__copy">&copy; 2026 Conduit Report.</p>
+  </div>
+</footer>
+</body>
+</html>
