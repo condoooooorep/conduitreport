@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gyazo data breach: 23.6 million records | Conduit Report</title>
+<meta name="description" content="The screenshot and clip-sharing tool popular with gamers confirmed hackers stole 23.6 million user records via a server flaw. What&#x27;s exposed and what to do now.">
+<link rel="canonical" href="https://www.conduitreport.com/gyazo-data-breach/">
+<meta property="og:title" content="Gyazo data breach: 23.6 million records | Conduit Report">
+<meta property="og:description" content="The screenshot and clip-sharing tool popular with gamers confirmed hackers stole 23.6 million user records via a server flaw. What&#x27;s exposed and what to do now.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Conduit Report">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.conduitreport.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..900;1,100..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0B1F26">
+<link rel="alternate" type="application/rss+xml" title="Conduit Report" href="/feed.xml">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5469599588574787" crossorigin="anonymous"></script>
+<!-- analytics: add a token in build.py -->
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Gyazo breach: 23.6 million accounts exposed \u2014 what was taken and what to do", "description": "The screenshot and clip-sharing tool popular with gamers confirmed hackers stole 23.6 million user records via a server flaw. What's exposed and what to do now.", "image": ["https://www.conduitreport.com/og-image.png"], "datePublished": "2026-09-26", "dateModified": "2026-09-26", "author": {"@type": "Organization", "name": "Conduit Report"}, "publisher": {"@type": "Organization", "name": "Conduit Report", "logo": {"@type": "ImageObject", "url": "https://www.conduitreport.com/apple-touch-icon.png"}}, "mainEntityOfPage": "https://www.conduitreport.com/gyazo-data-breach/"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="logo" href="/">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">Conduit<em>Report</em></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/">Latest</a>
+      <a href="/games/">Games</a><a href="/tech/">Tech</a><a href="/ai/">AI</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<article class="post">
+  <div class="wrap wrap--read">
+    <header class="post__head">
+      <p class="post__meta">
+        <span class="stamp stamp--confirmed">Confirmed</span>
+        <time datetime="2026-09-26">26 September 2026</time>
+        
+        <span>2 min read</span>
+      </p>
+      <p class="crumb"><a href="/tech/">Tech</a></p>
+      
+      <h1>Gyazo breach: 23.6 million accounts exposed — what was taken and what to do</h1>
+      <p class="post__dek">The screenshot and clip-sharing tool popular with gamers confirmed hackers stole 23.6 million user records via a server flaw. What's exposed and what to do now.</p>
+      <p class="post__stampnote">Stated by the maker, publisher, or platform holder.</p>
+    </header>
+    <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <div class="prose">
+<p>Gyazo — the screenshot, screen-recording, and image-sharing tool used by a lot of gamers to share clips and captures — has confirmed a data breach affecting 23.6 million user records. If you've ever made a Gyazo account, assume you're in it.</p>
+<h2>What's confirmed</h2>
+<aside class="callout callout--confirmed"><p class="callout__label">The breach</p><p>Gyazo confirmed that hackers exploited a server vulnerability on 11 September and stole 23.6 million user records.</p></aside>
+<p>The exposed data includes:</p>
+<ul>
+<li>Names or nicknames and email addresses</li>
+<li>Hashed passwords</li>
+<li>User and device IDs, and login session IDs</li>
+<li>X (Twitter) integration tokens and Google sign-in email addresses</li>
+<li>Profile details, subscription information, billing status, and usage statistics</li>
+</ul>
+<p>Separately, anonymous account records and around 490 million image metadata records were exposed — mostly relating to images uploaded before 19 January.</p>
+<h2>Why this one matters more than a typical breach</h2>
+<p>Two items on that list stand out.</p>
+<p><strong>Login session IDs</strong> can, in some cases, let an attacker act as a logged-in user without a password. Gyazo should be invalidating old sessions; logging out and back in is a sensible precaution either way.</p>
+<p><strong>X integration tokens</strong> are the other concern. If you connected Gyazo to your X account, that token is the permission Gyazo held to act on your behalf. A stolen token is only useful until it's revoked — so revoke it.</p>
+<p>The passwords were hashed, which means they weren't stored in plain text. That's better than the worst case, but hashed passwords can still be cracked, especially weak or reused ones.</p>
+<h2>What to do now</h2>
+<ol>
+<li><strong>Change your Gyazo password.</strong> If you reused it anywhere else, change it there too.</li>
+<li><strong>Revoke Gyazo's access to X</strong> in your X account's connected-apps settings, then reconnect only if you</li>
+</ol>
+<p>need it.</p>
+<ol>
+<li><strong>Log out of Gyazo on all devices</strong> and log back in.</li>
+<li><strong>Watch for phishing.</strong> With names, emails, and subscription details exposed, expect convincing fake</li>
+</ol>
+<p>Gyazo emails about billing or account problems. Don't click links in them — go to the site directly.</p>
+<ol>
+<li><strong>Turn on two-factor authentication</strong> anywhere you can, starting with any account that shared the</li>
+</ol>
+<p>Gyazo password.</p>
+<h2>The pattern</h2>
+<p>2026 has been a heavy year for breaches, and a recurring theme is services that sit quietly in the background — tools people signed up for years ago and forgot about. Gyazo is a good example: plenty of affected users won't remember having an account. That's exactly why the fix is worth doing today rather than when a phishing email arrives.</p>
+    </div>
+    <footer class="post__foot">
+      
+      <p class="post__updated">Published 26 September 2026. We add a dated update line to this page
+      when something it covers materially changes.</p>
+    </footer>
+    <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <nav class="pnav" aria-label="More posts"><a class="pnav__a" href="/steam-frame-week-one-price/"><span>Previous</span>Steam Frame, one week in: the best wireless PC VR headset, priced by the memory shortage</a><a class="pnav__a pnav__a--n" href="/ios-27-siri-ai-whats-new/"><span>Next</span>iOS 27 is out: Siri AI finally arrives — here's what actually changed</a></nav>
+  </div>
+</article>
+</main>
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p class="foot__brand">Conduit Report</p>
+    <p class="foot__disc">Independent coverage of games and technology. Not affiliated with, endorsed by,
+    or connected to any company written about here. All trademarks and product names belong to their
+    respective owners. Claims are attributed to their source and dated.</p>
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="/about/">About</a>
+      <a href="/editorial-standards/">Editorial standards</a>
+      <a href="/contact/">Contact</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy-policy/">Privacy policy</a>
+    </nav>
+    <p class="foot__copy">&copy; 2026 Conduit Report.</p>
+  </div>
+</footer>
+</body>
+</html>
