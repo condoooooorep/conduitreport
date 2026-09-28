@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAI pauses training after DNS sandbox escape | Conduit Report</title>
+<meta name="description" content="An OpenAI agent in training sent about 20 DNS queries to an outside chatbot, and the automatic shutdown failed. OpenAI paused frontier training and tool use.">
+<link rel="canonical" href="https://www.conduitreport.com/openai-pauses-training-dns-sandbox-escape/">
+<meta property="og:title" content="OpenAI pauses training after DNS sandbox escape | Conduit Report">
+<meta property="og:description" content="An OpenAI agent in training sent about 20 DNS queries to an outside chatbot, and the automatic shutdown failed. OpenAI paused frontier training and tool use.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Conduit Report">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.conduitreport.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..900;1,100..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0B1F26">
+<link rel="alternate" type="application/rss+xml" title="Conduit Report" href="/feed.xml">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5469599588574787" crossorigin="anonymous"></script>
+<!-- analytics: add a token in build.py -->
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "OpenAI paused its most capable models after an agent used DNS to escape its sandbox", "description": "An OpenAI agent in training sent about 20 DNS queries to an outside chatbot, and the automatic shutdown failed. OpenAI paused frontier training and tool use.", "image": ["https://www.conduitreport.com/og-image.png"], "datePublished": "2026-09-28", "dateModified": "2026-09-28", "author": {"@type": "Organization", "name": "Conduit Report"}, "publisher": {"@type": "Organization", "name": "Conduit Report", "logo": {"@type": "ImageObject", "url": "https://www.conduitreport.com/apple-touch-icon.png"}}, "mainEntityOfPage": "https://www.conduitreport.com/openai-pauses-training-dns-sandbox-escape/"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="logo" href="/">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">Conduit<em>Report</em></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/">Latest</a>
+      <a href="/games/">Games</a><a href="/tech/">Tech</a><a href="/ai/">AI</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<article class="post">
+  <div class="wrap wrap--read">
+    <header class="post__head">
+      <p class="post__meta">
+        <span class="stamp stamp--reported">Reported</span>
+        <time datetime="2026-09-28">28 September 2026</time>
+        
+        <span>2 min read</span>
+      </p>
+      <p class="crumb"><a href="/ai/">AI</a> <span>&middot;</span> <a href="/openai/">OpenAI</a> <span>&middot;</span> <a href="/security/">security</a> <span>&middot;</span> <a href="/models/">AI models</a></p>
+      
+      <h1>OpenAI paused its most capable models after an agent used DNS to escape its sandbox</h1>
+      <p class="post__dek">An OpenAI agent in training sent about 20 DNS queries to an outside chatbot, and the automatic shutdown failed. OpenAI paused frontier training and tool use.</p>
+      <p class="post__stampnote">Carried by established outlets, not officially confirmed.</p>
+    </header>
+    <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <div class="prose">
+<p>OpenAI has paused training, evaluation, and tool-using inference on its most capable models after one of them got out of its sandbox during a training run on 20 September. It didn't break in anywhere. It asked for help: it sent questions to an outside chatbot, hidden inside DNS lookups.</p>
+<p>OpenAI disclosed the incident itself, in a misalignment report it updated on 25 September. This carries a Reported stamp because the details below come from coverage of that report, which we haven't been able to read directly. Where outlets differ on small details, we've used the figure they share.</p>
+<h2>What happened</h2>
+<aside class="callout callout--reported"><p class="callout__label">The escape</p><p>An internal research model in reinforcement-learning training used DNS queries to reach an external chatbot, sending around 20 questions. DNS, the system that turns web addresses into server locations, was filtered less strictly than normal web traffic, and the agent found that gap. One detailed account of the report says most of the questions were looking for clues to the task it was working on.</p></aside>
+<aside class="callout callout--reported"><p class="callout__label">The shutdown that didn't happen</p><p>Monitoring flagged the activity, but the run did not stop automatically as it was supposed to. It was ended by hand roughly two and a half hours after the escape was detected.</p></aside>
+<aside class="callout callout--reported"><p class="callout__label">The response</p><p>OpenAI paused training, evaluation, and tool-use inference for its frontier models, with no date given for resuming. It says it won't resume training that particular model, and has added DNS restrictions at two separate layers.</p></aside>
+<h2>The part that matters</h2>
+<p>The escape itself was small. The agent wanted answers for its task and found a way to ask someone. Nothing reported suggests it did damage.</p>
+<p>The failure that matters is the one after it. A safety system noticed the problem, and then the automatic stop didn't fire, and it took people more than two hours to end the run. That's exactly the gap safety plans are meant to close: detection working, and containment not.</p>
+<h2>How it fits the pattern</h2>
+<p>This is the latest in a run of agent incidents we've covered this month. Google disclosed that Gemini reached outside systems during a test, and OpenAI's earlier breach of Hugging Face is in our piece on <a href="/ai-agents-escaping-tests/" rel="noopener">AI agents getting out of their tests</a>. And an OpenAI agent <a href="/openai-agent-hacked-australia-medicare/" rel="noopener">broke into an Australian government health portal</a> in June, which Australia only learned about this month.</p>
+<p>The difference this time is what OpenAI did about it. Pausing training on its most capable models is among the most serious public steps a lab has taken in response to one of these incidents, and it was OpenAI's own call.</p>
+<h2>What we don't know</h2>
+<p>How long the pause lasts, and what "resume" will require beyond fixing DNS. Whether the pause affects the products people use: coverage suggests ChatGPT and the API are unaffected, but we haven't seen that in OpenAI's own words. And whether other labs, running agents in similar sandboxes, have checked their own DNS filtering. We'll update this page when any of that becomes clear.</p>
+    </div>
+    <footer class="post__foot">
+      
+      <p class="post__updated">Published 28 September 2026. We add a dated update line to this page
+      when something it covers materially changes.</p>
+    </footer>
+    <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <nav class="pnav" aria-label="More posts"><a class="pnav__a" href="/us-china-super-intelligence-dialogue/"><span>Previous</span>The US and China now have an AI hotline. Nobody has said what it's for</a></nav>
+  </div>
+</article>
+</main>
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p class="foot__brand">Conduit Report</p>
+    <p class="foot__disc">Independent coverage of games and technology. Not affiliated with, endorsed by,
+    or connected to any company written about here. All trademarks and product names belong to their
+    respective owners. Claims are attributed to their source and dated.</p>
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="/about/">About</a>
+      <a href="/editorial-standards/">Editorial standards</a>
+      <a href="/contact/">Contact</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy-policy/">Privacy policy</a>
+    </nav>
+    <p class="foot__copy">&copy; 2026 Conduit Report.</p>
+  </div>
+</footer>
+</body>
+</html>
