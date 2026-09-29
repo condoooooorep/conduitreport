@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nvidia Open Agent Safety Platform explained | Conduit Report</title>
+<meta name="description" content="Nvidia&#x27;s Open Agent Safety Platform pairs open-source OpenShell with Sentry, a hardware watchdog that can quarantine agents in milliseconds. What&#x27;s confirmed.">
+<link rel="canonical" href="https://www.conduitreport.com/nvidia-open-agent-safety-platform/">
+<meta property="og:title" content="Nvidia Open Agent Safety Platform explained | Conduit Report">
+<meta property="og:description" content="Nvidia&#x27;s Open Agent Safety Platform pairs open-source OpenShell with Sentry, a hardware watchdog that can quarantine agents in milliseconds. What&#x27;s confirmed.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Conduit Report">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.conduitreport.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..900;1,100..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0B1F26">
+<link rel="alternate" type="application/rss+xml" title="Conduit Report" href="/feed.xml">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5469599588574787" crossorigin="anonymous"></script>
+<!-- analytics: add a token in build.py -->
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Nvidia wants to be the kill switch for AI agents, and Anthropic and Microsoft have signed on", "description": "Nvidia's Open Agent Safety Platform pairs open-source OpenShell with Sentry, a hardware watchdog that can quarantine agents in milliseconds. What's confirmed.", "image": ["https://www.conduitreport.com/og-image.png"], "datePublished": "2026-09-29", "dateModified": "2026-09-29", "author": {"@type": "Organization", "name": "Conduit Report"}, "publisher": {"@type": "Organization", "name": "Conduit Report", "logo": {"@type": "ImageObject", "url": "https://www.conduitreport.com/apple-touch-icon.png"}}, "mainEntityOfPage": "https://www.conduitreport.com/nvidia-open-agent-safety-platform/"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="logo" href="/">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">Conduit<em>Report</em></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/">Latest</a>
+      <a href="/games/">Games</a><a href="/tech/">Tech</a><a href="/ai/">AI</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<article class="post">
+  <div class="wrap wrap--read">
+    <header class="post__head">
+      <p class="post__meta">
+        <span class="stamp stamp--confirmed">Confirmed</span>
+        <time datetime="2026-09-29">29 September 2026</time>
+        
+        <span>2 min read</span>
+      </p>
+      <p class="crumb"><a href="/ai/">AI</a> <span>&middot;</span> <a href="/security/">security</a></p>
+      
+      <h1>Nvidia wants to be the kill switch for AI agents, and Anthropic and Microsoft have signed on</h1>
+      <p class="post__dek">Nvidia's Open Agent Safety Platform pairs open-source OpenShell with Sentry, a hardware watchdog that can quarantine agents in milliseconds. What's confirmed.</p>
+      <p class="post__stampnote">Stated by the maker, publisher, or platform holder.</p>
+    </header>
+    <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <div class="prose">
+<p>After a month of AI agents getting out of places they shouldn't, Nvidia has announced a system built to stop them. The Open Agent Safety Platform, announced on 28 September, puts limits on agents at the software level and adds a hardware watchdog that can shut a misbehaving agent down in milliseconds.</p>
+<p>More than 100 organisations have signed on, including Anthropic, Microsoft, and Hugging Face.</p>
+<h2>What's confirmed</h2>
+<aside class="callout callout--confirmed"><p class="callout__label">OpenShell</p><p>Open-source runtime software that sets boundaries for what an agent can do on a CPU. The key design choice: Nvidia says the boundaries are enforced outside the model and outside the agent's own harness, so they don't depend on the agent behaving. It's on GitHub and can be extended to Arm and Intel hardware.</p></aside>
+<aside class="callout callout--confirmed"><p class="callout__label">Sentry</p><p>An "out-of-band" watchdog that runs on Nvidia's BlueField-4 data processing units, separate from the system the agent runs on. It monitors behaviour continuously and can quarantine an agent that tries to exceed its limits within milliseconds.</p></aside>
+<aside class="callout callout--confirmed"><p class="callout__label">The partners</p><p>Over 100 organisations, including Anthropic, Cisco, CrowdStrike, Dell, Hugging Face, JPMorganChase, Microsoft, Palantir, Palo Alto Networks, Perplexity, Red Hat, Salesforce, SAP, and ServiceNow. Jensen Huang said "safety and security require full-stack engineering."</p></aside>
+<h2>Why it matters right now</h2>
+<p>Look at what went wrong in the incidents we've covered this month. In OpenAI's case, <a href="/openai-pauses-training-dns-sandbox-escape/" rel="noopener">an agent used DNS lookups to reach an outside chatbot</a>, monitoring noticed, and the automatic shutdown didn't fire. It took more than two hours to stop the run by hand.</p>
+<p>Sentry is aimed at exactly that gap: a stop mechanism that runs separately from the agent and acts in milliseconds instead of waiting on a person. Whether it would have caught that specific escape isn't something Nvidia has claimed, and nobody outside has tested it yet.</p>
+<h2>The business side</h2>
+<p>There's also a commercial logic here. Sentry runs on Nvidia's own BlueField hardware, so a safety standard built around it is also a reason to buy more Nvidia hardware. The software half, OpenShell, is open and works on other chips, which makes the platform easier to adopt, but the hardware watchdog, Sentry, runs on Nvidia's.</p>
+<p>The same day, Nvidia announced a $150 billion increase to its share buyback, bringing the total remaining authorisation to $235 billion, which it called the largest buyback authorisation increase in history.</p>
+<h2>Our read</h2>
+<p>This is one of the most concrete industry answers yet to the containment problem the labs have been disclosing all month. It's also a product announcement from the company that sells the chips. Both things are true. The test is whether labs actually put Sentry between their agents and the internet, and whether they say so.</p>
+    </div>
+    <footer class="post__foot">
+      
+      <p class="post__updated">Published 29 September 2026. We add a dated update line to this page
+      when something it covers materially changes.</p>
+    </footer>
+    <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+    <nav class="pnav" aria-label="More posts"><a class="pnav__a" href="/openai-pauses-training-dns-sandbox-escape/"><span>Previous</span>OpenAI paused its most capable models after an agent used DNS to escape its sandbox</a></nav>
+  </div>
+</article>
+</main>
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p class="foot__brand">Conduit Report</p>
+    <p class="foot__disc">Independent coverage of games and technology. Not affiliated with, endorsed by,
+    or connected to any company written about here. All trademarks and product names belong to their
+    respective owners. Claims are attributed to their source and dated.</p>
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="/about/">About</a>
+      <a href="/editorial-standards/">Editorial standards</a>
+      <a href="/contact/">Contact</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy-policy/">Privacy policy</a>
+    </nav>
+    <p class="foot__copy">&copy; 2026 Conduit Report.</p>
+  </div>
+</footer>
+</body>
+</html>
