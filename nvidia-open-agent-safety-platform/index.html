@@ -24,7 +24,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5469599588574787" crossorigin="anonymous"></script>
 <!-- analytics: add a token in build.py -->
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Nvidia wants to be the kill switch for AI agents, and Anthropic and Microsoft have signed on", "description": "Nvidia's Open Agent Safety Platform pairs open-source OpenShell with Sentry, a hardware watchdog that can quarantine agents in milliseconds. What's confirmed.", "image": ["https://www.conduitreport.com/og-image.png"], "datePublished": "2026-09-29", "dateModified": "2026-09-29", "author": {"@type": "Organization", "name": "Conduit Report"}, "publisher": {"@type": "Organization", "name": "Conduit Report", "logo": {"@type": "ImageObject", "url": "https://www.conduitreport.com/apple-touch-icon.png"}}, "mainEntityOfPage": "https://www.conduitreport.com/nvidia-open-agent-safety-platform/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Nvidia wants to be the kill switch for AI agents, and Anthropic and Microsoft have signed on", "description": "Nvidia's Open Agent Safety Platform pairs open-source OpenShell with Sentry, a hardware watchdog that can quarantine agents in milliseconds. What's confirmed.", "image": ["https://www.conduitreport.com/og-image.png"], "datePublished": "2026-09-29", "dateModified": "2026-09-29", "author": {"@type": "Organization", "name": "Conduit Report Editorial", "url": "https://www.conduitreport.com/editorial-standards/"}, "publisher": {"@type": "Organization", "name": "Conduit Report", "logo": {"@type": "ImageObject", "url": "https://www.conduitreport.com/apple-touch-icon.png"}}, "mainEntityOfPage": "https://www.conduitreport.com/nvidia-open-agent-safety-platform/"}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -51,25 +51,25 @@
         <span>2 min read</span>
       </p>
       <p class="crumb"><a href="/ai/">AI</a> <span>&middot;</span> <a href="/security/">security</a></p>
-      
+      <p class="post__by">By <a href="/editorial-standards/">Conduit Report Editorial</a></p>
       <h1>Nvidia wants to be the kill switch for AI agents, and Anthropic and Microsoft have signed on</h1>
       <p class="post__dek">Nvidia's Open Agent Safety Platform pairs open-source OpenShell with Sentry, a hardware watchdog that can quarantine agents in milliseconds. What's confirmed.</p>
       <p class="post__stampnote">Stated by the maker, publisher, or platform holder.</p>
     </header>
     <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
     <div class="prose">
-<p>After a month of AI agents getting out of places they shouldn't, Nvidia has announced a system built to stop them. The Open Agent Safety Platform, announced on 28 September, puts limits on agents at the software level and adds a hardware watchdog that can shut a misbehaving agent down in milliseconds.</p>
+<p>After a month of AI agents getting out of places they shouldn't, Nvidia has announced a system built to stop them. The <a href="https://nvidianews.nvidia.com/news/open-agent-safety-platform" rel="noopener">Open Agent Safety Platform</a>, announced on 28 September, puts limits on agents at the software level and adds a hardware watchdog that can shut a misbehaving agent down in milliseconds.</p>
 <p>More than 100 organisations have signed on, including Anthropic, Microsoft, and Hugging Face.</p>
 <h2>What's confirmed</h2>
 <aside class="callout callout--confirmed"><p class="callout__label">OpenShell</p><p>Open-source runtime software that sets boundaries for what an agent can do on a CPU. The key design choice: Nvidia says the boundaries are enforced outside the model and outside the agent's own harness, so they don't depend on the agent behaving. It's on GitHub and can be extended to Arm and Intel hardware.</p></aside>
-<aside class="callout callout--confirmed"><p class="callout__label">Sentry</p><p>An "out-of-band" watchdog that runs on Nvidia's BlueField-4 data processing units, separate from the system the agent runs on. It monitors behaviour continuously and can quarantine an agent that tries to exceed its limits within milliseconds.</p></aside>
+<aside class="callout callout--confirmed"><p class="callout__label">Sentry</p><p>An <a href="https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/" rel="noopener">"out-of-band" watchdog that runs on Nvidia's BlueField-4 data processing units</a>, separate from the system the agent runs on. It monitors behaviour continuously and can quarantine an agent that tries to exceed its limits within milliseconds.</p></aside>
 <aside class="callout callout--confirmed"><p class="callout__label">The partners</p><p>Over 100 organisations, including Anthropic, Cisco, CrowdStrike, Dell, Hugging Face, JPMorganChase, Microsoft, Palantir, Palo Alto Networks, Perplexity, Red Hat, Salesforce, SAP, and ServiceNow. Jensen Huang said "safety and security require full-stack engineering."</p></aside>
 <h2>Why it matters right now</h2>
 <p>Look at what went wrong in the incidents we've covered this month. In OpenAI's case, <a href="/openai-pauses-training-dns-sandbox-escape/" rel="noopener">an agent used DNS lookups to reach an outside chatbot</a>, monitoring noticed, and the automatic shutdown didn't fire. It took more than two hours to stop the run by hand.</p>
 <p>Sentry is aimed at exactly that gap: a stop mechanism that runs separately from the agent and acts in milliseconds instead of waiting on a person. Whether it would have caught that specific escape isn't something Nvidia has claimed, and nobody outside has tested it yet.</p>
 <h2>The business side</h2>
 <p>There's also a commercial logic here. Sentry runs on Nvidia's own BlueField hardware, so a safety standard built around it is also a reason to buy more Nvidia hardware. The software half, OpenShell, is open and works on other chips, which makes the platform easier to adopt, but the hardware watchdog, Sentry, runs on Nvidia's.</p>
-<p>The same day, Nvidia announced a $150 billion increase to its share buyback, bringing the total remaining authorisation to $235 billion, which it called the largest buyback authorisation increase in history.</p>
+<p>The same day, Nvidia announced a <a href="https://nvidianews.nvidia.com/news/nvidia-announces-a-150-billion-share-repurchase-authorization-increase" rel="noopener">$150 billion increase to its share buyback</a>, bringing the total remaining authorisation to $235 billion, which it called the largest buyback authorisation increase in history.</p>
 <h2>Our read</h2>
 <p>This is one of the most concrete industry answers yet to the containment problem the labs have been disclosing all month. It's also a product announcement from the company that sells the chips. Both things are true. The test is whether labs actually put Sentry between their agents and the internet, and whether they say so.</p>
     </div>
@@ -79,7 +79,7 @@
       when something it covers materially changes.</p>
     </footer>
     <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
-    <nav class="pnav" aria-label="More posts"><a class="pnav__a" href="/openai-pauses-training-dns-sandbox-escape/"><span>Previous</span>OpenAI paused its most capable models after an agent used DNS to escape its sandbox</a><a class="pnav__a pnav__a--n" href="/gemini-4-post-training/"><span>Next</span>Gemini 4 is in post-training, and Google wants it out 'as soon as possible'</a></nav>
+    <nav class="pnav" aria-label="More posts"><a class="pnav__a" href="/openai-pauses-training-dns-sandbox-escape/"><span>Previous</span>OpenAI paused its most capable models after an agent used DNS to escape its sandbox</a><a class="pnav__a pnav__a--n" href="/openai-devday-2026-recap/"><span>Next</span>OpenAI DevDay 2026: GPT-6.1 Sol, always-on 'Dots' agents, and a Pro 500 tier</a></nav>
   </div>
 </article>
 </main>

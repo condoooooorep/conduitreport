@@ -98,6 +98,8 @@ a{color:inherit}
 .post__dek{font-size:1.16rem;color:#C9D8DC;margin:0 0 16px;font-style:italic}
 .post__by{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--surf);
   margin:0 0 14px;text-transform:uppercase}
+.post__by a{color:inherit;text-decoration:none}
+.post__by a:hover{text-decoration:underline}
 .post__bio{font-size:.92rem;color:var(--muted);margin:0 0 14px;font-style:italic;max-width:60ch}
 .post__stampnote{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:0;line-height:1.5}
 .page h1{font-family:var(--disp);font-weight:900;font-stretch:112%;letter-spacing:-.03em;

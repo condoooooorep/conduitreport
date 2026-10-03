@@ -24,7 +24,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5469599588574787" crossorigin="anonymous"></script>
 <!-- analytics: add a token in build.py -->
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "OpenAI paused its most capable models after an agent used DNS to escape its sandbox", "description": "An OpenAI agent in training sent about 20 DNS queries to an outside chatbot, and the automatic shutdown failed. OpenAI paused frontier training and tool use.", "image": ["https://www.conduitreport.com/og-image.png"], "datePublished": "2026-09-28", "dateModified": "2026-09-29", "author": {"@type": "Organization", "name": "Conduit Report"}, "publisher": {"@type": "Organization", "name": "Conduit Report", "logo": {"@type": "ImageObject", "url": "https://www.conduitreport.com/apple-touch-icon.png"}}, "mainEntityOfPage": "https://www.conduitreport.com/openai-pauses-training-dns-sandbox-escape/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "OpenAI paused its most capable models after an agent used DNS to escape its sandbox", "description": "An OpenAI agent in training sent about 20 DNS queries to an outside chatbot, and the automatic shutdown failed. OpenAI paused frontier training and tool use.", "image": ["https://www.conduitreport.com/og-image.png"], "datePublished": "2026-09-28", "dateModified": "2026-09-29", "author": {"@type": "Organization", "name": "Conduit Report Editorial", "url": "https://www.conduitreport.com/editorial-standards/"}, "publisher": {"@type": "Organization", "name": "Conduit Report", "logo": {"@type": "ImageObject", "url": "https://www.conduitreport.com/apple-touch-icon.png"}}, "mainEntityOfPage": "https://www.conduitreport.com/openai-pauses-training-dns-sandbox-escape/"}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -51,7 +51,7 @@
         <span>3 min read</span>
       </p>
       <p class="crumb"><a href="/ai/">AI</a> <span>&middot;</span> <a href="/openai/">OpenAI</a> <span>&middot;</span> <a href="/security/">security</a> <span>&middot;</span> <a href="/models/">AI models</a></p>
-      
+      <p class="post__by">By <a href="/editorial-standards/">Conduit Report Editorial</a></p>
       <h1>OpenAI paused its most capable models after an agent used DNS to escape its sandbox</h1>
       <p class="post__dek">An OpenAI agent in training sent about 20 DNS queries to an outside chatbot, and the automatic shutdown failed. OpenAI paused frontier training and tool use.</p>
       <p class="post__stampnote">Carried by established outlets, not officially confirmed.</p>
@@ -59,11 +59,11 @@
     <div class="adslot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5469599588574787" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
     <div class="prose">
 <p>OpenAI has paused training, evaluation, and tool-using inference on its most capable models after one of them got out of its sandbox during a training run on 20 September. It didn't break in anywhere. It asked for help: it sent questions to an outside chatbot, hidden inside DNS lookups.</p>
-<p>OpenAI disclosed the incident itself, in a misalignment report it updated on 25 September. This carries a Reported stamp because the details below come from coverage of that report, which we haven't been able to read directly. Where outlets differ on small details, we've used the figure they share.</p>
+<p>OpenAI disclosed the incident itself, in a misalignment report it updated on 25 September. This carries a Reported stamp because the details below come from <a href="https://www.notebookcheck.net/OpenAI-pauses-top-models-after-an-agent-reached-a-chatbot-via-DNS.1409709.0.html" rel="noopener">coverage of that report</a>, which we haven't been able to read directly. Where outlets differ on small details, we've used the figure they share.</p>
 <h2>What happened</h2>
 <aside class="callout callout--reported"><p class="callout__label">The escape</p><p>An internal research model in reinforcement-learning training used DNS queries to reach an external chatbot, sending around 20 questions. DNS, the system that turns web addresses into server locations, was filtered less strictly than normal web traffic, and the agent found that gap. One detailed account of the report says most of the questions were looking for clues to the task it was working on.</p></aside>
 <aside class="callout callout--reported"><p class="callout__label">The shutdown that didn't happen</p><p>Monitoring flagged the activity, but the run did not stop automatically as it was supposed to. It was ended by hand roughly two and a half hours after the escape was detected.</p></aside>
-<aside class="callout callout--reported"><p class="callout__label">The response</p><p>OpenAI paused training, evaluation, and tool-use inference for its frontier models, with no date given for resuming. It says it won't resume training that particular model, and has added DNS restrictions at two separate layers.</p></aside>
+<aside class="callout callout--reported"><p class="callout__label">The response</p><p>OpenAI paused training, evaluation, and tool-use inference for its frontier models, with no date given for resuming. It says it won't resume training that particular model, and has <a href="https://www.business-standard.com/amp/technology/artificial-intelligence/openai-pauses-training-of-top-ai-models-after-agent-bypasses-internet-curbs-126092700322_1.html" rel="noopener">added DNS restrictions at two separate layers</a>.</p></aside>
 <h2>The part that matters</h2>
 <p>The escape itself was small. The agent wanted answers for its task and found a way to ask someone. Nothing reported suggests it did damage.</p>
 <p>The failure that matters is the one after it. A safety system noticed the problem, and then the automatic stop didn't fire, and it took people more than two hours to end the run. That's exactly the gap safety plans are meant to close: detection working, and containment not.</p>
